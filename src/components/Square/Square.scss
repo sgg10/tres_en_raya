@@ -1,0 +1,64 @@
+@import "../../assets/styles/colors.scss";
+
+.darkSquareTheme {
+	background-color: $dark_theme_font_secondary;
+}
+
+.ligthSquareTheme {
+	background-color: $ligtht_theme_font_secondary;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+
+	margin: 5px;
+	transition: all 0.2s;
+	border-radius: 0;
+	clip-path: polygon(36% 0, 0 0, 0 29%, 0 57%, 0 100%, 30% 100%, 73% 100%, 100% 100%, 100% 59%, 100% 31%, 100% 0, 74% 0);
+}
+
+.X {
+	clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+	background-color: $strom_blue;
+}
+
+.O {
+	border-radius: 50%;
+	background-color: $sap_green;
+}
+
+.X-winner {
+	animation: x_winner_animation infinite 2s ease-in-out;
+}
+.O-winner {
+	animation: o_winner_animation infinite 2s ease-in-out;
+}
+
+@keyframes x_winner_animation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes o_winner_animation {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		border-radius: 0%;
+	}
+	100% {
+		border-radius: 50%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.square {
+		width: 80px;
+		height: 80px;
+	}
+}

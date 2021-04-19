@@ -1,0 +1,25 @@
+@import "../../assets/styles/colors.scss";
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+}
+
+.darkTheme {
+	background-color: $dark_theme_background;
+	color: $dark_theme_font_primary;
+	a {
+		color: $dark_theme_font_primary;
+	}
+}
+
+.lightTheme {
+	background-color: $ligtht_theme_background;
+	color: $ligtht_theme_font_primary;
+	a {
+		color: $ligtht_theme_font_primary;
+	}
+}

@@ -1,0 +1,31 @@
+@import "../../assets/styles/colors.scss";
+
+.scores {
+	width: 320px;
+	display: flex;
+	grid-auto-flow: column;
+	margin-top: 5px;
+
+	div {
+		width: 50%;
+		color: $ligtht_theme_font_primary;
+		text-align: center;
+		font-size: 2em;
+		padding: 5px;
+		font-weight: bold;
+	}
+
+	&__X {
+		background-color: $strom_blue;
+	}
+
+	&__O {
+		background-color: $sap_green;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.scores {
+		width: 260px;
+	}
+}
